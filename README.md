@@ -1,4 +1,4 @@
-# 📚 PahanaEduTS - Bookshop Management System  
+# 📚 PahanaEdu - Management System  
 *ICBT SEM 05 CIS6003 Assignment*  
 **Version 1.0**
 
