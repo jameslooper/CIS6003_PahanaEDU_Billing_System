@@ -1,6 +1,6 @@
 # 📚 PahanaEdu - Management System  
 *ICBT SEM 05 CIS6003 Assignment*  
-**Version 1.0**
+**Version 2.0**
 
 A fully functional **web-based bookshop management system** developed using **Java Servlets, JSP, and MySQL**.  
 Designed for **Pahana Edu Bookshop in Colombo**, this system streamlines daily operations such as customer account handling, inventory tracking, billing, and overall administration.
