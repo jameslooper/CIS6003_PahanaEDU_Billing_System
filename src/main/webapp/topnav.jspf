@@ -1,0 +1,12 @@
+
+<div class="nav">
+  <div><b>Pahana Edu</b> — Billing System</div>
+  <div class="right">
+    <a href="dashboard.jsp">Dashboard</a>
+    <a href="listCustomers.jsp">Customers</a>
+    <a href="listItems.jsp">Items</a>
+    <a href="bill.jsp">Billing</a>
+    <a href="help.jsp">Help</a>
+    <a href="logout" >Logout</a>
+  </div>
+</div>
