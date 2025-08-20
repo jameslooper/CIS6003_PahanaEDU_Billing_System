@@ -2,7 +2,11 @@
 <%
   if (session.getAttribute("username") == null) { response.sendRedirect("login.jsp"); return; }
   List<Customer> list = new ArrayList<>();
+<<<<<<< HEAD
   try { list = CustomerDAO.listAll(); } catch(Exception e) { e.printStackTrace(); }
+=======
+  try { list = CustomerDAO.getAllCustomers(); } catch(Exception e) { e.printStackTrace(); }
+>>>>>>> 8324489c3589ef1fde3ccf3cd84cf9eb837897e8
 %>
 <!DOCTYPE html>
 <html>
@@ -49,4 +53,8 @@
 </div>
 <div class="footer">© Pahana Edu, Colombo</div>
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 8324489c3589ef1fde3ccf3cd84cf9eb837897e8

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%@ page language="java" pageEncoding="UTF-8" import="dao.CustomerDAO, dao.ItemDAO, model.Customer, model.Item, java.util.List, java.text.SimpleDateFormat, java.util.Date, java.math.BigDecimal" %>
 <%@ page session="true" %>
 <%
@@ -12,10 +13,18 @@
     String currentDate = new SimpleDateFormat("MMMM dd, yyyy").format(new Date());
     Customer c = (Customer) request.getAttribute("customer");
     BigDecimal amount = (BigDecimal) request.getAttribute("amount");
+=======
+<%@ page language="java" pageEncoding="UTF-8" import="model.Customer,java.math.BigDecimal" %>
+<%
+  if (session.getAttribute("username") == null) { response.sendRedirect("login.jsp"); return; }
+  Customer c = (Customer) request.getAttribute("customer");
+  BigDecimal amount = (BigDecimal) request.getAttribute("amount");
+>>>>>>> 8324489c3589ef1fde3ccf3cd84cf9eb837897e8
 %>
 <!DOCTYPE html>
 <html>
 <head>
+<<<<<<< HEAD
     <title>Billing - Pahana Edu</title>
     <link rel="stylesheet" href="css/style.css" />
     <style>
@@ -122,10 +131,15 @@
             window.print();
         }
     </script>
+=======
+  <title>Billing - Pahana Edu</title>
+  <link rel="stylesheet" href="css/style.css" />
+>>>>>>> 8324489c3589ef1fde3ccf3cd84cf9eb837897e8
 </head>
 <body>
 <jsp:include page="topnav.jspf" />
 <div class="wrapper">
+<<<<<<< HEAD
     <div class="card">
         <h2>Calculate and Print Bill</h2>
         <form method="post" action="bill">
@@ -195,3 +209,38 @@
 <div class="footer">© Pahana Edu, Colombo</div>
 </body>
 </html>
+=======
+  <div class="card">
+    <h2>Calculate & Print Bill</h2>
+    <form method="post" action="bill">
+      <div class="row">
+        <div>
+          <label>Customer Account No</label>
+          <input type="number" name="accountNo" min="1" required />
+        </div>
+      </div>
+      <br/>
+      <button class="btn" type="submit">Compute</button>
+    </form>
+
+    <%
+      if (request.getAttribute("msg") != null) {
+    %><div class="alert error"><%=request.getAttribute("msg")%></div><% } %>
+
+    <% if (c != null && amount != null) { %>
+      <hr/>
+      <h3>Bill Summary</h3>
+      <table class="table">
+        <tr><th>Account No</th><td><%=c.getAccountNo()%></td></tr>
+        <tr><th>Name</th><td><%=c.getName()%></td></tr>
+        <tr><th>Units</th><td><%=c.getUnits()%></td></tr>
+        <tr><th>Total (Rs.)</th><td><b><%=amount%></b></td></tr>
+      </table>
+      <button class="btn" onclick="window.print()">Print</button>
+    <% } %>
+  </div>
+</div>
+<div class="footer">© Pahana Edu, Colombo</div>
+</body>
+</html>
+>>>>>>> 8324489c3589ef1fde3ccf3cd84cf9eb837897e8
